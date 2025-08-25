@@ -4,6 +4,7 @@ import numpy as np
 from dotenv import load_dotenv
 import os
 
+load_dotenv(dotenv_path='/Users/pearl/igem-reddit-nlp/.env')
 client_id = os.getenv("CLIENT_ID")
 client_secret = os.getenv("CLIENT_SECRET")
 
@@ -26,8 +27,6 @@ def is_relevant(text):
         return False
     text = text.lower()
     return any(keyword in text for keyword in keywords)
-
-# load_dotenv(dotenv_path='/Users/pearl/igem-reddit-nlp/.env')
 
 # client_id = os.getenv('CLIENT_ID')
 # client_secret = os.getenv('CLIENT_SECRET')
